@@ -57,6 +57,10 @@
     animation: wobble 2s ease infinite;
 }
 
+.smallBox {
+    animation: scalePulse 1s ease 1;
+}
+	
 @keyframes wobble {
     0%, 100% {
         -webkit-transform: translateX(0%);
@@ -90,6 +94,21 @@
         transform: translateX(calc(-32px / 5.5)) rotate(calc(-10deg / 5));
     }
 }
+	
+@keyframes scalePulse {
+  0%{
+      -webkit-transform: scale(0%);
+      transform: scale(0%) translateX(-500px) translateY(200px);
+  }
+  50% {
+    -webkit-transform: scale(200%);
+    transform: scale(200%) translateX(50px) translateY(100px);
+  }
+  100%{
+    -webkit-transform: scale(100%);
+    transform: scale(100%) translateX(0px) translateY(0px);
+  }
+}	
 
 .container {
   margin: 0px;
@@ -173,6 +192,13 @@ html {
             <img src="Images/Mobile_wGame_christmas.png" alt="Iphone med spillet på" width = 800px>
           </a>
       </div>
+    
+      <div style = "position: absolute; margin-top: -100px; transform:rotate(-12deg);">
+        <div class = "smallBox">
+          <img src="Images/AlleSnakkerHemnes.png" alt="Alle snakker hemnesværing" width = "250vw">
+        </div>
+      </div>
+
     </div>
   </div>
 
